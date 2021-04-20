@@ -1,0 +1,6 @@
+# Automatically generated configuration for PyQt5.Qsci.
+
+sip-version = "5.1.0"
+sip-abi-version = "12.7"
+module-tags = ["QScintilla_5_14_0"]
+module-disabled-features = []

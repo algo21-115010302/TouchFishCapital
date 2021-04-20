@@ -1,0 +1,4 @@
+pandas
+simplejson
+protobuf==3.5.1
+PyCryptodome

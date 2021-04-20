@@ -1,0 +1,55 @@
+# coding: utf-8
+from sqlalchemy import Numeric, Column
+from .fundamental_base_sql import FundamentalBase
+
+
+class StkCashGen(FundamentalBase):
+    cash_received_from_sales_of_goods = Column(Numeric(18, 2))
+    rental_cash = Column(Numeric(18, 2))
+    refunds_of_vat = Column(Numeric(18, 2))
+    refunds_of_other_taxes = Column(Numeric(18, 2))
+    refunds_of_taxes = Column(Numeric(18, 2))
+    cash_from_other_operating_activities = Column(Numeric(18, 2))
+    cash_from_operating_activities = Column(Numeric(18, 2))
+    cash_paid_for_goods_and_services = Column(Numeric(18, 2))
+    cash_paid_for_rental = Column(Numeric(18, 2))
+    cash_paid_for_employee = Column(Numeric(18, 2))
+    cash_paid_for_taxes = Column(Numeric(18, 2))
+    cash_paid_for_other_operation_activities = Column(Numeric(18, 2))
+    cash_paid_for_operation_activities = Column(Numeric(18, 2))
+    cash_flow_from_operating_activities = Column(Numeric(18, 2))
+    cash_received_from_disposal_of_investment = Column(Numeric(18, 2))
+    cash_received_from_dividend = Column(Numeric(18, 2))
+    cash_received_from_interest = Column(Numeric(18, 2))
+    cash_received_from_disposal_of_asset = Column(Numeric(18, 2))
+    cash_received_from_other_investment_activities = Column(Numeric(18, 2))
+    cash_received_from_investment_activities = Column(Numeric(18, 2))
+    cash_paid_for_asset = Column(Numeric(18, 2))
+    cash_paid_to_acquire_investment = Column(Numeric(18, 2))
+    cash_paid_for_other_investment_activities = Column(Numeric(18, 2))
+    cash_paid_for_investment_activities = Column(Numeric(18, 2))
+    cash_flow_from_investing_activities = Column(Numeric(18, 2))
+    cash_received_from_equity_investors = Column(Numeric(18, 2))
+    cash_received_from_debt_investors = Column(Numeric(18, 2))
+    cash_received_from_investors = Column(Numeric(18, 2))
+    cash_received_from_financial_institution_borrows = Column(Numeric(18, 2))
+    cash_received_from_other_financing_activities = Column(Numeric(18, 2))
+    cash_received_from_financing_activities = Column(Numeric(18, 2))
+    cash_paid_for_debt = Column(Numeric(18, 2))
+    cash_paid_for_dividend_and_interest = Column(Numeric(18, 2))
+    cash_paid_for_other_financing_activities = Column(Numeric(18, 2))
+    cash_paid_to_financing_activities = Column(Numeric(18, 2))
+    cash_flow_from_financing_activities = Column(Numeric(18, 2))
+
+    assets_depreciation_reserves = Column(Numeric(18, 2))
+    fixed_asset_depreciation = Column(Numeric(18, 2))
+    intangible_asset_amortization = Column(Numeric(18, 2))
+    deferred_expense_amort = Column(Numeric(18, 2))
+
+    net_inc_cash_and_equivalents = Column(Numeric(19, 4))
+
+    exchange_rate_change_effect = Column(Numeric(19, 4))
+    cash_equivalent_increase = Column(Numeric(19, 4))
+
+    net_cash_deal_from_sub = Column(Numeric(19, 4))
+    net_cash_payment_from_sub = Column(Numeric(19, 4))
