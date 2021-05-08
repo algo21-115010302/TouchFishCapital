@@ -9,8 +9,39 @@ This framework can be used to implement the following functions：
 * Newly added feature: TCA
 
 ## Run the framework
-Run the run.py file in the TouchFishCapital folder, then the GUI of the framework will appear.
+Run the run.py file in the TouchFishCapital folder, then the GUI of the framework will appear.  
+The main screen is displayed as follows:  
 
+![image](https://github.com/algo21-115010302/TouchFishCapital/blob/main/GUI%20pngs/framework%201.png)
+
+## Backtesting Data Import
+Click the Data Management button in the main interface to enter the upload data interface.   
+Select the local csv data file, fill in the parameters and the table header corresponding to each column of data, and click OK.  
+
+![image](https://github.com/algo21-115010302/TouchFishCapital/blob/main/GUI%20pngs/import%20data.png)
+![image](https://github.com/algo21-115010302/TouchFishCapital/blob/main/GUI%20pngs/import%20data%20successfully.png)
+
+After refreshing the interface, click View and enter the time period you want to view the data, you can see the uploaded data in the right interface. 
+
+![image](https://github.com/algo21-115010302/TouchFishCapital/blob/main/GUI%20pngs/view%20data.png)
+
+Make sure the upload data is successful.
+
+## Strategy writing and backtesting
+
+Click the backtest button in the main interface to enter the backtest interface.    
+Here you can select the written strategy file, set the backtesting time period, commission, slippage, etc.  
+
+![image](https://github.com/algo21-115010302/TouchFishCapital/blob/main/GUI%20pngs/backtest.png)
+
+Enter the required parameters for the selected strategy and start backtesting.   
+
+![image](https://github.com/algo21-115010302/TouchFishCapital/blob/main/GUI%20pngs/backtest%20parameters.png)
+
+After the backtest is finished, the interface will automatically display the backtest results and you can see the money curve, return indicator, etc. for the strategy in the selected time period.   
+
+![image](https://github.com/algo21-115010302/TouchFishCapital/blob/main/GUI%20pngs/backtest%20result%201.png)
+![image](https://github.com/algo21-115010302/TouchFishCapital/blob/main/GUI%20pngs/backtest%20result%202.png)
 
 
 
