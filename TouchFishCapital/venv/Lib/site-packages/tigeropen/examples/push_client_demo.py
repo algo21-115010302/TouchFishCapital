@@ -1,0 +1,171 @@
+# -*- coding: utf-8 -*-
+"""
+Created on 2018/10/30
+
+@author: gaoan
+"""
+import time
+# from tigeropen.common.consts import QuoteKeyType
+from tigeropen.push.push_client import PushClient
+from tigeropen.examples.client_config import get_client_config
+
+
+def on_query_subscribed_quote(symbols, focus_keys, limit, used):
+    """
+    查询已订阅symbol回调
+    :param symbols: 订阅合约的列表
+    :param focus_keys: 每个合约订阅的 key 列表
+    :param limit: 当前 tigerid 可以订阅的合约数量
+    :param used: 目前已订阅的合约数量
+    :return:
+        返回示例:
+        symbols: ['00700', 'SPY'],
+        focus_keys: {'00700': ['ask_size', 'latest_price', 'ask_price', 'prev_close', 'open', 'minute', 'low', 'volume',
+         'bid_price', 'bid_size', 'high', 'close'], 'SPY': ['ask_size', 'latest_price', 'ask_price', 'prev_close',
+         'open', 'minute', 'low', 'volume', 'bid_price', 'bid_size', 'high', 'close']},
+        limit: 100,
+        used: 2
+
+    """
+    print(symbols, focus_keys, limit, used)
+
+
+def on_quote_changed(symbol, items, hour_trading):
+    """
+    行情推送回调
+    :param symbol: 订阅的证券代码
+    :param items: list，每个元素是一个tuple，对应订阅的字段名称和值
+    :param hour_trading: 是否为盘前盘后的交易
+    :return:
+    items 数据示例
+        [('latest_price', 339.8), ('ask_size', 42500), ('ask_price', 340.0), ('bid_size', 1400), ('bid_price', 339.8),
+         ('high', 345.0), ('prev_close', 342.4), ('low', 339.2), ('open', 344.0), ('volume', 7361440),
+         ('minute', {'p': 339.8, 'a': 341.084, 't': 1568098440000, 'v': 7000, 'h': 340.0, 'l': 339.8}),
+         ('timestamp', '1568098469463')]
+    """
+    print(symbol, items, hour_trading)
+
+
+def on_order_changed(account, items):
+    """
+
+    :param account:
+    :param items:
+    :return:
+    items 数据示例:
+        [('order_type', 'LMT'), ('symbol', 'ABCD'), ('order_id', 1000101463), ('sec_type', 'STK'), ('filled', 100),
+        ('quantity', 100), ('segment', 'summary'), ('action', 'BUY'), ('currency', 'USD'), ('id', 173612806463631360),
+        ('order_time', 1568095814556), ('time_in_force', 'DAY'), ('identifier', 'ABCD'), ('limit_price', 113.7),
+        ('outside_rth', True), ('avg_fill_price', 113.7), ('trade_time', 1568095815418),
+        ('status', <OrderStatus.FILLED: 'Filled'>)]
+    """
+    print(account, items)
+
+
+def on_asset_changed(account, items):
+    """
+
+    :param account:
+    :param items:
+    :return:
+    items 数据示例:
+        [('equity_with_loan', 721583.83), ('gross_position_value', 1339641.94),
+        ('excess_liquidity', 378624.18), ('available_funds', 320059.1), ('initial_margin_requirement', 497419.25),
+        ('buying_power', 2293551.51), ('cash', 950059.0), ('segment', 'summary'), ('net_liquidation', 817685.72),
+        ('maintenance_margin_requirement', 439061.54)]
+    """
+    print(account, items)
+
+
+def on_position_changed(account, items):
+    """
+
+    :param account:
+    :param items:
+    :return:
+    items 数据示例:
+        [('symbol', 'ABCD'), ('market_price', 3.68525), ('market_value', 0.0), ('sec_type', 'STK'),
+        ('segment', 'summary'), ('currency', 'USD'), ('quantity', 0.0), ('average_cost', 3.884548)]
+    """
+    print(account, items)
+
+
+def subscribe_callback(destination, content):
+    """
+    订阅成功与否的回调
+    :param destination: 订阅的类型. 有 quote, trade/asset, trade/position, trade/order
+    :param content: 回调信息. 如成功 {'code': 0, 'message': 'success'}; 若失败则 code 不为0, message 为错误详情
+    """
+    print('subscribe:{}, callback content:{}'.format(destination, content))
+
+
+def unsubscribe_callback(destination, content):
+    """
+    退订成功与否的回调
+    :param destination: 取消订阅的类型. 有 quote, trade/asset, trade/position, trade/order
+    :param content: 回调信息.
+    """
+    print('subscribe:{}, callback content:{}'.format(destination, content))
+
+
+# def connect_callback():
+#     """连接建立回调"""
+#     print('connected')
+#
+#
+# def disconnect_callback():
+#     """连接断开回调. 此处利用回调进行重连"""
+#     for t in range(1, 200):
+#         try:
+#             print('disconnected, reconnecting')
+#             push_client.connect(client_config.tiger_id, client_config.private_key)
+#         except:
+#             print('connect failed, retry')
+#             time.sleep(t)
+#         else:
+#             print('reconnect success')
+#             return
+#     print('reconnect failed, please check your network')
+#
+
+if __name__ == '__main__':
+    client_config = get_client_config()
+    protocol, host, port = client_config.socket_host_port
+    push_client = PushClient(host, port, use_ssl=(protocol == 'ssl'))
+
+    # 行情变动回调
+    push_client.quote_changed = on_quote_changed
+    # 已订阅 symbol 查询回调
+    push_client.subscribed_symbols = on_query_subscribed_quote
+    # 订单变动回调
+    # push_client.order_changed = on_order_changed
+    # 资产变动回调
+    # push_client.asset_changed = on_asset_changed
+    # 持仓变动回调
+    # push_client.position_changed = on_position_changed
+
+    # 订阅成功与否的回调
+    push_client.subscribe_callback = subscribe_callback
+    # 退订成功与否的回调
+    push_client.unsubscribe_callback = unsubscribe_callback
+
+    # 建立推送连接
+    push_client.connect(client_config.tiger_id, client_config.private_key)
+    # 断线重连回调
+    # push_client.disconnect_callback = disconnect_callback
+
+    # 订阅行情
+    push_client.subscribe_quote(['AAPL', 'GOOG'])
+    # 可以指定关注的行情key的类型, QuoteKeyType.TRADE 为成交数据, QuoteKeyType.QUOTE 为盘口数据
+    # push_client.subscribe_quote(['MSFT', 'AMD'], quote_key_type=QuoteKeyType.TRADE)
+    # 订阅资产变动
+    push_client.subscribe_asset()
+    # 订阅订单变动
+    push_client.subscribe_order()
+    # 订阅持仓变动
+    push_client.subscribe_position()
+    # 查询已订阅的 symbol
+    push_client.query_subscribed_quote()
+
+    time.sleep(600)
+    push_client.disconnect()

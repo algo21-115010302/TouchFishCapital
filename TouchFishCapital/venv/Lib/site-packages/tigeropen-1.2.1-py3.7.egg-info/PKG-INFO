@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: tigeropen
+Version: 1.2.1
+Summary: TigerBrokers Open API
+Home-page: https://github.com/tigerbrokers/openapi-python-sdk
+Author: TigerBrokers
+Author-email: openapi@tigerbrokers.com
+License: Apache License v2
+Description: UNKNOWN
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: rqdatac
+Version: 2.9.30
+Summary: Ricequant Data SDK
+Home-page: https://www.ricequant.com/doc/rqdata-institutional#research-version
+Author: Ricequant
+Author-email: public@ricequant.com
+License: UNKNOWN
+Download-URL: https://pypi.org/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Environment :: Console
+Description-Content-Type: text/markdown
+Requires-Dist: brotli
+Requires-Dist: python-dateutil
+Requires-Dist: msgpack (>=0.5.2)
+Requires-Dist: six
+Requires-Dist: SQLAlchemy
+Requires-Dist: pymysql
+Requires-Dist: pandas
+Requires-Dist: python-rapidjson
+Provides-Extra: bond
+Requires-Dist: rqdatac-bond ; extra == 'bond'
+Provides-Extra: fund
+Requires-Dist: rqdatac-fund ; extra == 'fund'
+Provides-Extra: proxy
+Requires-Dist: PySocks ; extra == 'proxy'
+
+# RQDATAC: Ricequant Data Client
+
+**rqdatac** is a python package providing financial data from trusted sources, free you 
+from IT maintenance or data cleansing tasks for financial institutions.
+
+It provides with audited data in formatted data structure via thoughtfully designed APIs so to 
+improve efficiency in data processing.
+
+## Get Start
+- [Init](https://www.ricequant.com/doc/rqdata-institutional#research-init)
+- [API Doc](https://www.ricequant.com/doc/rqdata-institutional#research-API)
+- [Change Log](https://www.ricequant.com/doc/rqdata-institutional#research-init)
+
+## Have A Try
+- Get free access to [RQData](https://www.ricequant.com/welcome/trial/rqdata-cloud ).
+- Learn more [details](https://www.ricequant.com/welcome/rqdata).
+
+

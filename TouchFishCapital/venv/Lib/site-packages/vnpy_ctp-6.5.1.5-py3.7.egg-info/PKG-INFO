@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: vnpy-ctp
+Version: 6.5.1.5
+Summary: CTP gateway for vn.py quant trading framework.
+Home-page: https://www.vnpy.com
+Author: Xiaoyou Chen
+Author-email: xiaoyou.chen@mail.vnpy.com
+License: MIT
+Description: # vn.py框架的CTP底层接口
+        
+        <p align="center">
+          <img src ="https://vnpy.oss-cn-shanghai.aliyuncs.com/vnpy-logo.png"/>
+        </p>
+        
+        <p align="center">
+            <img src ="https://img.shields.io/badge/version-6.5.1.3-blueviolet.svg"/>
+            <img src ="https://img.shields.io/badge/platform-windows|linux-yellow.svg"/>
+            <img src ="https://img.shields.io/badge/python-3.7-blue.svg" />
+            <img src ="https://img.shields.io/github/license/vnpy/vnpy.svg?color=orange"/>
+        </p>
+        
+        ## 说明
+        
+        基于CTP期货版的6.5.1接口封装开发，接口中自带的是【穿透式实盘环境】的dll文件。
+        
+        ## 安装
+        
+        安装需要基于2.2.0版本以上的[VN Studio](https://www.vnpy.com)。
+        
+        直接使用pip命令：
+        
+        ```
+        pip install vnpy_ctp
+        ```
+        
+        
+        或者下载解压后在cmd中运行：
+        
+        ```
+        python setup.py install
+        ```
+        
+        ## 使用
+        
+        以脚本方式启动（script/run.py）：
+        
+        ```
+        from vnpy.event import EventEngine
+        from vnpy.trader.engine import MainEngine
+        from vnpy.trader.ui import MainWindow, create_qapp
+        
+        from vnpy_ctp import CtpGateway
+        
+        
+        def main():
+            """主入口函数"""
+            qapp = create_qapp()
+        
+            event_engine = EventEngine()
+            main_engine = MainEngine(event_engine)
+            main_engine.add_gateway(CtpGateway)
+            
+            main_window = MainWindow(main_engine, event_engine)
+            main_window.showMaximized()
+        
+            qapp.exec()
+        
+        
+        if __name__ == "__main__":
+            main()
+        ```
+        
+Keywords: quant,quantitative,investment,trading,algotrading,ctp
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Office/Business :: Financial :: Investment
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Chinese (Simplified)
+Description-Content-Type: text/markdown
