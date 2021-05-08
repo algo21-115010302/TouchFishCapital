@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c49c436-e048-4445-9cd1-5366270c050e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/TouchFishCapital.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TouchFishCapital.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="d84ba160-3bfb-48ca-8c69-a39dbbf7ff68" />
+  <component name="ProjectId" id="1rye0rJwxqnS7R9FLZepMnJhuvP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c49c436-e048-4445-9cd1-5366270c050e" name="Default Changelist" comment="" />
+      <created>1619952538493</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619952538493</updated>
+      <workItem from="1619952540193" duration="2168000" />
+      <workItem from="1619956214721" duration="3908000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="599" y="295" key="FileChooserDialogImpl" timestamp="1619957220545">
+      <screen x="0" y="25" width="1623" height="1025" />
+    </state>
+    <state x="599" y="295" key="FileChooserDialogImpl/0.25.1623.1025@0.25.1623.1025" timestamp="1619957220545" />
+    <state x="320" y="173" key="SettingsEditor" timestamp="1619957272359">
+      <screen x="0" y="25" width="1623" height="1025" />
+    </state>
+    <state x="320" y="173" key="SettingsEditor/0.25.1623.1025@0.25.1623.1025" timestamp="1619957272359" />
+  </component>
+</project>
