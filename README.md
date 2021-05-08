@@ -1,3 +1,20 @@
+## Project Content Introduction 
+
+This is a simple digital currency trading system based on the vnpy quantitative framework.   
+This framework can be used to implement the following functions：  
+* Live Trading Framework
+* Backtesting Data Import
+* Strategy writing and backtesting
+* Algorithm Trading
+* Newly added feature: TCA
+
+## Run the framework
+Run the run.py file in the TouchFishCapital folder, then the GUI of the framework will appear.
+
+
+
+
+
 ### 问题 **【交给罗丰决定】**
 * project具体的要求，需要呈现什么东西，【参看第一节PPT】
 * 时间问题，注意可交易时间，交易频率
