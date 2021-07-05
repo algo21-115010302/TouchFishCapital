@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8c49c436-e048-4445-9cd1-5366270c050e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/TouchFishCapital.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TouchFishCapital.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8c49c436-e048-4445-9cd1-5366270c050e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +38,7 @@
       <updated>1619952538493</updated>
       <workItem from="1619952540193" duration="2168000" />
       <workItem from="1619956214721" duration="3908000" />
+      <workItem from="1625460719920" duration="413000" />
     </task>
     <servers />
   </component>
